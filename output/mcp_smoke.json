@@ -1,0 +1,110 @@
+{
+  "connection": ".mcp.json",
+  "server": "campus-customs",
+  "database": "data/campus_customs_new.db",
+  "tools": [
+    {
+      "prompt": "Okay now Problem 4 - Add the MCP Server to Vibe Coder and Test Each Tool. We need to add my MCP server to this project so that you, the vibe coder, can call the tools. Save the connection JSON text in .mcp.json at the project root (or however you, the vibe coder, saves local MCP server lists). Once you, the vibe coder, are connected, test each of the three MCP tools. Save evidence in output/mcp_smoke.json. For every tool include the prompt I asked the vibe coder (which may apply to multiple tools), the tool name, and the tool output (must match values in data/campus_customs_new.db. Once you do this, pressure test probelm 4 is done accurately and well to Tauhid's liking and let me know if we can move on to problem 5",
+      "tool": "lookup_order_stock_and_reprint_invoice",
+      "arguments": {
+        "ticket_id": 101
+      },
+      "output": {
+        "found": true,
+        "applicable": true,
+        "ticket_id": 101,
+        "ticket_type": "customer_order",
+        "status": "open",
+        "requester": "Tauhid Zaman",
+        "subject": "Bulldog tee",
+        "notes": "Needs a tee in size S.",
+        "sku": "CC-TEE-WHITE",
+        "size": "S",
+        "requested_qty": 1,
+        "item_name": "Classic Bulldog Tee",
+        "on_hand_qty": 0,
+        "location": "Aisle B",
+        "shortfall": 1,
+        "invoice_id": 501,
+        "invoice_amount": 840.0,
+        "invoice_due_date": "2026-08-28",
+        "invoice_status": "open",
+        "invoice_description": "Rush reprint CC-TEE-WHITE S",
+        "shop_today": "2026-08-31",
+        "invoice_due_before_shop_today": true,
+        "vendor_id": 1,
+        "vendor_name": "Bulldog Print Co",
+        "vendor_specialty": "apparel reprint",
+        "vendor_lead_days": 5,
+        "vendor_open_invoice_count": 1
+      }
+    },
+    {
+      "prompt": "Okay now Problem 4 - Add the MCP Server to Vibe Coder and Test Each Tool. We need to add my MCP server to this project so that you, the vibe coder, can call the tools. Save the connection JSON text in .mcp.json at the project root (or however you, the vibe coder, saves local MCP server lists). Once you, the vibe coder, are connected, test each of the three MCP tools. Save evidence in output/mcp_smoke.json. For every tool include the prompt I asked the vibe coder (which may apply to multiple tools), the tool name, and the tool output (must match values in data/campus_customs_new.db. Once you do this, pressure test probelm 4 is done accurately and well to Tauhid's liking and let me know if we can move on to problem 5",
+      "tool": "lookup_rent_due_against_cash",
+      "arguments": {
+        "ticket_id": 102
+      },
+      "output": {
+        "found": true,
+        "applicable": true,
+        "ticket_id": 102,
+        "ticket_type": "rent_notice",
+        "status": "open",
+        "requester": "Elm City Properties",
+        "subject": "Rent due",
+        "notes": "Email: shop rent due in 2 days.",
+        "lease_id": 1,
+        "space_name": "Chapel Street shop",
+        "landlord": "Elm City Properties",
+        "monthly_rent": 2400.0,
+        "next_due": "2026-09-02",
+        "lease_notes": null,
+        "shop_today": "2026-08-31",
+        "rent_due_before_shop_today": false,
+        "cash_accounts": [
+          {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          }
+        ],
+        "checking_balance": 3400.0,
+        "checking_as_of": "2026-08-31",
+        "cash_covers_monthly_rent": true,
+        "cash_after_rent": 1000.0,
+        "payments_with_this_lease_ref": []
+      }
+    },
+    {
+      "prompt": "Okay now Problem 4 - Add the MCP Server to Vibe Coder and Test Each Tool. We need to add my MCP server to this project so that you, the vibe coder, can call the tools. Save the connection JSON text in .mcp.json at the project root (or however you, the vibe coder, saves local MCP server lists). Once you, the vibe coder, are connected, test each of the three MCP tools. Save evidence in output/mcp_smoke.json. For every tool include the prompt I asked the vibe coder (which may apply to multiple tools), the tool name, and the tool output (must match values in data/campus_customs_new.db. Once you do this, pressure test probelm 4 is done accurately and well to Tauhid's liking and let me know if we can move on to problem 5",
+      "tool": "lookup_bulk_discount_margin",
+      "arguments": {
+        "ticket_id": 103
+      },
+      "output": {
+        "found": true,
+        "applicable": true,
+        "ticket_id": 103,
+        "ticket_type": "price_override",
+        "status": "open",
+        "requester": "Yale AI Club",
+        "subject": "Bulk hoodie discount",
+        "notes": "Student org wants 20 hoodies, size M, asking for a bulk discount.",
+        "sku": "CC-HOOD-NAVY",
+        "size": "M",
+        "requested_qty": 20,
+        "item_name": "Basic Hoodie Big Yale",
+        "on_hand_qty": 8,
+        "location": "Aisle A",
+        "shortfall": 12,
+        "fillable_from_shelf": 8,
+        "unit_cost": 22.0,
+        "list_price": 58.0,
+        "list_margin_per_unit": 36.0,
+        "list_extended": 1160.0,
+        "cost_extended": 440.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs — resolved board</title>
+  <style>
+    :root { --bg: #14090e; --ink: #f6f1e8; --muted: #d9c7cf; --pink: #e2186a; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.5 Georgia, "Iowan Old Style", serif;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 36px 20px 72px; }
+    h1 { font-size: 2.4rem; font-weight: 500; letter-spacing: -0.03em; margin: 0 0 8px; }
+    .lede { color: var(--muted); margin: 0 0 28px; }
+    article { margin: 0 0 36px; }
+    h2 { font-size: 1.4rem; margin: 0 0 6px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(246, 241, 232, 0.2);
+      background: #000;
+    }
+    strong { color: var(--pink); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>The night desk, after the three tickets</h1>
+    <p class="lede">Screenshots of the React board at <code>http://localhost:5173</code>. Each shot was taken in the same sitting, after that ticket’s run. Checking started at $3,400.00 and ended at $160.00.</p>
+
+    <article>
+      <h2>Ticket 101 — Bulldog tee</h2>
+      <p>Handled. The draft is on the ticket. Inventory reported the empty size S shelf. This shot is from just after the $840.00 reprint was approved, while 102 and 103 were still open.</p>
+      <img src="board-101.png" alt="React desk after ticket 101 was resolved, with a Handled stamp on the tee ticket">
+    </article>
+
+    <article>
+      <h2>Ticket 102 — Rent due</h2>
+      <p>Handled. Boss, Facilities, and Accounting worked the lease. Inventory sat it out. This frame is the decision on the desk, taken after the reprint and before the rent left checking. The balance at that moment was $2,560.00. The rent card itself sits beside the tee card, and the later shot shows its Handled stamp.</p>
+      <img src="board-102.png" alt="React desk while ticket 102 was resolved, showing the rent decision and Boss">
+    </article>
+
+    <article>
+      <h2>Ticket 103 — Bulk hoodie discount</h2>
+      <p>Handled, with 101 and 102 already stamped. Checking reads <strong>$160.00</strong>. The banner is the refused pay: this ticket has no payable obligation. Inventory, Accounting, and the customer draft are on the desk. Facilities sat it out.</p>
+      <img src="board-all-resolved.png" alt="React desk with tickets 101, 102, and 103 marked Handled and checking at $160.00">
+    </article>
+  </main>
+</body>
+</html>

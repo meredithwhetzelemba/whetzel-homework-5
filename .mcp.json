@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "campus-customs": {
+      "command": "mcp_server/.venv/bin/python",
+      "args": ["mcp_server/server.py"],
+      "env": {
+        "FASTMCP_SHOW_SERVER_BANNER": "false"
+      }
+    }
+  }
+}

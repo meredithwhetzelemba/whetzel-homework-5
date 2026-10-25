@@ -1,0 +1,85 @@
+{
+  "shop_today": "2026-08-31",
+  "database": "data/campus_customs_new.db",
+  "starting_checking_balance": 3400.0,
+  "ending_checking_balance": 160.0,
+  "tickets": [
+    {
+      "id": 101,
+      "final_status": "resolved",
+      "run_id": "team_e21565a54f",
+      "short_outcome": "Size S of CC-TEE-WHITE is out of stock and Bulldog Print Co will not ship while invoice 501 is open. A holding draft was saved on the ticket and not emailed. A human then paid the stored $840.00 reprint.",
+      "agents": {
+        "boss": "Worked only ticket 101. Called Inventory, then Accounting, then Customer Service. Final call: no tee today, do not promise a restock date, and do not pay until a human approves the $840.00 invoice.",
+        "inventory": "On hand for size S is 0, shortfall 1. Invoice 501 is open at $840.00, due 2026-08-28, overdue against shop today. Vendor lead time is 5 days only after the vendor is allowed to ship. Asked Accounting about the bill.",
+        "accounting": "Confirmed invoice 501 is open and overdue for $840.00. Checking coverage was not on this ticket's tool, and a later ask back to Boss hit the depth limit, so coverage stayed unknown. Asked for a human approval and did not pay.",
+        "facilities": "Did not work this ticket.",
+        "customer_service": "Saved a draft telling Tauhid the size S tee is not on the shelf and that no restock date can be promised. sent is false. Did not quote the $840.00 reprint bill."
+      },
+      "human_approvals": [
+        {
+          "approved_by": "Meredith Whetzel",
+          "paid": true,
+          "kind": "invoice",
+          "ref_id": 501,
+          "amount": 840.0,
+          "account": "checking",
+          "paid_at": "2026-08-31",
+          "checking_before": 3400.0,
+          "checking_after": 2560.0
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "final_status": "resolved",
+      "run_id": "team_ad0bf5677a",
+      "short_outcome": "Chapel Street rent is $2,400.00 due 2026-09-02, not overdue on shop today. Checking after the reprint payment could cover it and would leave $160.00. Nobody contacted the landlord. A human then paid the stored rent.",
+      "agents": {
+        "boss": "Worked only ticket 102. Called Facilities for the lease and Accounting for coverage. Prepared the $2,400.00 rent for a human and did not pay.",
+        "inventory": "Did not work this ticket.",
+        "accounting": "Checking was $2,560.00 and covers the $2,400.00 rent, leaving $160.00 if paid. Rent is not yet due. No payment was made by the agent.",
+        "facilities": "Lease 1 is the Chapel Street shop, landlord Elm City Properties, monthly rent $2,400.00, next due 2026-09-02. Not overdue. Asked Accounting before any money moved. Did not contact the landlord.",
+        "customer_service": "Did not work this ticket."
+      },
+      "human_approvals": [
+        {
+          "approved_by": "Meredith Whetzel",
+          "paid": true,
+          "kind": "rent",
+          "ref_id": 1,
+          "amount": 2400.0,
+          "account": "checking",
+          "paid_at": "2026-08-31",
+          "checking_before": 2560.0,
+          "checking_after": 160.0
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "final_status": "resolved",
+      "run_id": "team_0e9ceebd8e",
+      "short_outcome": "Eight size M navy hoodies are on hand against a request for 20, so 12 are short. List is $58.00, cost is $22.00, margin is $36.00, and no discount percent is stored. A draft was saved and not emailed. No money moved.",
+      "agents": {
+        "boss": "Worked only ticket 103. Called Inventory, Accounting, and Customer Service directly. Eight can be filled from the shelf, twelve are short, and no payment is due.",
+        "inventory": "CC-HOOD-NAVY size M on hand is 8, requested 20, shortfall 12. Did not write customer wording.",
+        "accounting": "Unit cost $22.00, list $58.00, list margin $36.00. No stored discount percent, so none was named. A price at or under cost is not a discount to offer. Asked a person to decide any discount.",
+        "facilities": "Did not work this ticket.",
+        "customer_service": "Saved a draft that says 8 size M are on hand and that a bulk price will be confirmed before anything is quoted. sent is false. No percent off."
+      },
+      "human_approvals": [
+        {
+          "approved_by": "Meredith Whetzel",
+          "paid": false,
+          "kind": null,
+          "ref_id": null,
+          "amount": 0.0,
+          "reason": "This ticket type has no payable obligation in the database.",
+          "checking_before": 160.0,
+          "checking_after": 160.0
+        }
+      ]
+    }
+  ]
+}

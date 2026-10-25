@@ -1,0 +1,186 @@
+:root {
+  --ink: #14090e;
+  --paper: #f6f1e8;
+  --blush: #f8d5e3;
+  --pink: #e2186a;
+  --muted: #8a6d78;
+  --line: rgba(246, 241, 232, 0.16);
+  color: var(--paper);
+  background: var(--ink);
+  font-family: Outfit, "Avenir Next", sans-serif;
+  font-weight: 360;
+  line-height: 1.45;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; color: inherit; }
+
+.desk {
+  min-height: 100vh;
+  padding: 36px 28px 72px;
+  background:
+    radial-gradient(900px 420px at 100% -10%, rgba(226, 24, 106, 0.22), transparent 60%),
+    var(--ink);
+}
+
+.masthead, .work, .summary {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--blush);
+}
+
+h1, h2, h3, .balance, .ticket-id {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 520;
+  letter-spacing: -0.03em;
+}
+
+h1 { margin: 4px 0; font-size: 3.2rem; font-style: italic; }
+h2 { margin: 0 0 8px; font-size: 2rem; }
+.today, .asof, .meta, .note { color: #d9c7cf; margin: 0; }
+
+.drawer { text-align: right; }
+.balance { margin: 0; font-size: 3.4rem; font-style: italic; line-height: 0.95; }
+.drawer.dropped .balance { color: var(--pink); }
+
+.banner {
+  max-width: 1100px;
+  margin: 16px auto 0;
+  padding: 10px 14px;
+  border: 1px solid var(--pink);
+  color: var(--blush);
+}
+
+.board {
+  max-width: 1100px;
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 14px;
+}
+
+.ticket {
+  position: relative;
+  text-align: left;
+  background: var(--paper);
+  color: var(--ink);
+  border: 0;
+  min-height: 170px;
+  padding: 18px 16px 16px;
+  cursor: pointer;
+}
+.ticket.selected { outline: 2px solid var(--pink); outline-offset: 4px; }
+.ticket.resolved { background: #e7d9cc; }
+.ticket-id { display: block; font-size: 2.4rem; line-height: 1; }
+.ticket-subject { display: block; margin-top: 10px; font-weight: 640; }
+.ticket-who { display: block; color: #5c4650; font-size: 0.92rem; }
+.state, .stamp {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.stamp {
+  border: 1.5px solid var(--pink);
+  color: var(--pink);
+  padding: 4px 8px;
+  transform: rotate(-8deg);
+  font-family: Fraunces, Georgia, serif;
+  letter-spacing: 0.08em;
+}
+
+.work {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  padding-bottom: 8px;
+}
+.actions { display: flex; gap: 10px; align-items: center; }
+.run, .approve button, .quiet {
+  border: 0;
+  cursor: pointer;
+  padding: 12px 16px;
+}
+.run, .approve button { background: var(--pink); color: #fff8fb; }
+.run:disabled, .approve button:disabled { opacity: 0.6; cursor: wait; }
+.quiet { background: transparent; color: var(--blush); border-bottom: 1px solid var(--blush); padding-inline: 0; }
+
+.staff {
+  max-width: 1100px;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: 1.3fr repeat(4, 1fr);
+  gap: 10px;
+}
+.plate {
+  min-height: 210px;
+  padding: 14px;
+  border: 1px solid var(--line);
+}
+.plate header p { margin: 0; color: var(--muted); font-size: 0.85rem; }
+.plate h3 { margin: 0; font-size: 1.35rem; }
+.speech { min-height: 4.5rem; }
+.tool {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--blush);
+}
+.plate-boss { background: #1c0d14; }
+.plate-inventory { background: #24140c; }
+.plate-accounting { background: #1a1014; }
+.plate-accounting .speech { font-family: Fraunces, Georgia, serif; font-size: 1.05rem; }
+.plate-facilities { background: transparent; border-style: dashed; }
+.plate-customer_service { background: #2a121c; }
+.plate-customer_service .speech { font-family: Fraunces, Georgia, serif; font-style: italic; }
+.plate.speaking { border-color: var(--pink); }
+
+.summary {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.recommendation { color: var(--blush); }
+.approve {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+  margin-top: 12px;
+}
+.approve label { width: 100%; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.approve input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--paper);
+  padding: 8px 0;
+  min-width: 220px;
+}
+.paid { color: var(--blush); }
+
+@media (max-width: 860px) {
+  .board, .staff, .work, .masthead { display: block; }
+  .ticket, .plate { margin-bottom: 12px; }
+  .drawer { text-align: left; margin-top: 18px; }
+  h1 { font-size: 2.4rem; }
+}
